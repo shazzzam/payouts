@@ -1,0 +1,76 @@
+.transactions__headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.transactions__filter-btn {
+  height: 24px;
+  width: 24px;
+  border-radius: var(--border-radius-forms);
+  background-color: var(--background-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 800px) {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+.transactions__filter-icon {
+  width: 16px;
+  height: 16px;
+
+  @media (min-width: 800px) {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.transactions__list {
+  margin-top: var(--margin-main);
+  overflow: hidden;
+
+  @media (min-width: 800px) {
+    margin-top: 29px;
+    width: 100%;
+  }
+}
+
+.transactions__item {
+  margin-bottom: var(--margin-small);
+  position: relative;
+}
+
+.transactions__item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 1px;
+  background-color: var(--background-divider);
+  left: -20px;
+  bottom: 0;
+
+  @media (min-width: 800px) {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.transactions__more {
+  margin-top: var(--margin-medium);
+  width: 100%;
+
+  @media (min-width: 800px) {
+    margin-top: 32px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+    height: 42px;
+    font-size: 14px;
+  }
+}

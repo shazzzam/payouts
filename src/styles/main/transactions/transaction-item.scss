@@ -1,0 +1,147 @@
+.transaction-item {
+  display: grid;
+  grid-template-areas:
+    "icon icon icon icon"
+    "method number date amount";
+  gap: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: calc(100vw - 40px);
+  min-width: 280px;
+
+  @media (min-width: 800px) {
+    width: auto;
+    display: table-row;
+  }
+}
+
+.transaction-item__img-container {
+  grid-area: icon;
+  margin-right: auto;
+  height: 38px;
+  width: calc(100vw - 40px);
+  min-width: 280px;
+  padding: 2px;
+  padding-left: var(--padding-main);
+  display: flex;
+  align-items: center;
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-forms);
+
+  @media (min-width: 800px) {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    margin-right: 0;
+    justify-content: center;
+  }
+}
+
+.transaction-item__img {
+  max-width: 60px;
+  max-height: 29px;
+
+  @media (min-width: 800px) {
+    max-width: 43px;
+  }
+}
+
+.transaction-item__status {
+  position: absolute;
+  right: 0;
+  top: 0;
+  grid-area: status;
+  margin-left: auto;
+  text-align: right;
+  padding: 4px;
+  padding-right: var(--padding-main);
+  text-transform: capitalize;
+
+  @media (min-width: 800px) {
+    order: 2;
+    margin-left: 0;
+    position: static;
+    text-align: left;
+    padding-bottom: 18px;
+  }
+}
+
+.transaction-item__status-title {
+  font-size: 12px;
+
+  @media (min-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+.transaction-item__status-title--active {
+  color: var(--text-success);
+}
+
+.transaction-item__status-title--processing {
+  color: var(--text-warning);
+}
+
+.transaction-item__status-title--performed {
+  color: var(--text-info);
+}
+
+.transaction-item__status-text {
+  font-size: 8px;
+
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+}
+
+.transaction-item__group {
+  height: 62px;
+  width: 140px;
+  padding-left: var(--padding-main);
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  @media (min-width: 800px) {
+    height: 45px;
+    width: auto;
+    display: table-cell;
+    padding-bottom: 18px;
+  }
+}
+
+.transaction-item__group-title {
+  font-size: 12px;
+
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+}
+
+.transaction-item__group-text {
+  font-size: 10px;
+
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+}
+
+.transaction-item__group--method {
+  grid-area: method;
+}
+
+.transaction-item__group--number {
+  grid-area: number;
+}
+
+.transaction-item__group--date {
+  grid-area: date;
+}
+
+.transaction-item__group--amount {
+  grid-area: amount;
+}

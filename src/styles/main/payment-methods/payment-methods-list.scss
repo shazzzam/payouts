@@ -1,0 +1,25 @@
+.payment-methods {
+  margin-top: var(--margin-main);
+
+  @media (min-width: 800px) {
+    margin-top: var(--margin-big);
+  }
+}
+
+.payment-methods__title {
+  font-size: 16px;
+}
+
+.payment-methods__list {
+  margin-top: var(--margin-main);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--margin-small);
+  width: 100%;
+
+  @media (min-width: 800px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+}

@@ -1,0 +1,32 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--background-main);
+  z-index: 100;
+
+  @media (min-width: 800px) {
+    right: auto;
+    width: 300px;
+  }
+}
+
+.navigation__headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.navigation__container {
+  margin-top: 4px;
+  padding: 0 20px;
+}
+
+.navigation__item {
+  margin-bottom: var(--margin-main);
+  font-family: 'Avenir-heavy', sans-serif;
+  font-size: 16px;
+}

@@ -1,0 +1,27 @@
+.main {
+  margin-top: var(--margin-medium);
+  padding-bottom: 40px;
+  position: relative;
+
+  @media (min-width: 800px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.main__wrapper {
+  @extend %container;
+}
+
+.main__promo-code, .main__transactions {
+  margin-top: var(--margin-medium);
+
+  @media (min-width: 800px) {
+    margin-top: 42px;
+  }
+}
+
+.main__h2 {
+  font-size: 18px;
+  margin-top: var(--margin-tiny);
+}

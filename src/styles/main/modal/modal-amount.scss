@@ -1,0 +1,36 @@
+.modal-amount__title {
+  width: 100%;
+  text-align: center;
+}
+
+.modal-amount__input {
+  margin-top: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Avenir-heavy', sans-serif;
+  font-size: 16px;
+}
+
+.modal-amount__buttons {
+  margin-top: var(--margin-tiny);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 5px;
+
+  @media (min-width: 800px) {
+    gap: 16px;
+  }
+}
+
+.modal-amount__btn {
+  height: 35px;
+  font-size: 12px;
+  padding: 0;
+  background-color: var(--background-light);
+}
+
+.modal-amount__hint {
+  margin-top: 14px;
+  font-size: 12px;
+  text-align: center;
+}

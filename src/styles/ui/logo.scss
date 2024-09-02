@@ -1,0 +1,8 @@
+.logo {
+  height: 32px;
+  align-items: center;
+
+  @media (min-width: 800px) {
+    height: 42px;
+  }
+}

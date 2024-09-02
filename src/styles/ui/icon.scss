@@ -1,0 +1,27 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  @include icon(var(--text-main));
+}
+
+.icon-with-badge {
+  position: relative;
+}
+
+.icon-with-badge::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--background-accent);
+  border: 1px solid #000000;
+  border-radius: 100%;
+}
+
+.plus-icon {
+  width: 16px;
+  height: 16px;
+}

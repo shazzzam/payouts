@@ -1,0 +1,38 @@
+.modal-balance {
+  height: 42px;
+  background-color: var(--background-secondary);
+  border-radius: var(--border-radius-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -1px 2px 6px 0 #00000009;
+
+  @media (min-width: 800px) {
+    border-radius: 0;
+    position: relative;
+    left: -32px;
+    width: calc(100% + 64px);
+    height: 48px;
+  }
+}
+
+.modal-balance__text {
+  font-family: 'Avenir-heavy', sans-serif;
+  font-size: 14px;
+  color: var(--text-main);
+
+  @media (min-width: 800px) {
+    font-size: 16px;
+  }
+}
+
+.modal-balance__balance {
+  margin-left: 4px;
+  font-family: 'Avenir-black', sans-serif;
+  font-size: 18px;
+  color: var(--text-main);
+
+  @media (min-width: 800px) {
+    font-size: 24px;
+  }
+}

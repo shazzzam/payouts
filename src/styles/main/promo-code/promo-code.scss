@@ -1,0 +1,17 @@
+.code-section__hint {
+  font-size: 10px;
+  line-height: 24px;
+
+  @media (min-width: 800px) {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+}
+
+.code-section__form {
+  margin-top: 8px;
+
+  @media (min-width: 800px) {
+    margin-top: 12px;
+  }
+}

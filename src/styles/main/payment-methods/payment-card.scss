@@ -1,0 +1,77 @@
+.payment-card {
+  height: 79px;
+  width: auto;
+  padding: var(--padding-small);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  background-color: var(--background-light);
+  border-radius: var(--border-radius-forms);
+
+  @media (min-width: 800px) {
+    width: 172px;
+    height: 105px;
+  }
+}
+
+.payment-card__img-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  max-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 800px) {
+    max-height: 37px;
+  }
+}
+
+.payment-card__img {
+  height: 100%;
+}
+
+.payment-card__title {
+  font-size: 10px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    font-size: 14px;
+  }
+}
+
+.payment-card__text {
+  margin-top: 1px;
+  font-size: 8px;
+  text-align: center;
+
+  @media (min-width: 800px) {
+    font-size: 12px;
+  }
+}
+
+.payment-card__badge {
+  height: 16px;
+  width: 78px;
+  position: absolute;
+  border-radius: 2px;
+  color: var(--text-main);
+  font-face: 'Avenir-black', sans-serif;
+  font-size: 8px;
+  top: -8px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.payment-card__badge--popular {
+  background-color: var(--background-secondary);
+}
+
+.payment-card__badge--trusted {
+  background-color: var(--background-accent);
+}
