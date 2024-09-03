@@ -1,0 +1,33 @@
+.modal-dropdown {
+  position: absolute;
+  top: calc(100% + var(--margin-tiny));
+  width: 100%;
+  background-color: var(--background-light);
+  z-index: 100;
+}
+
+.modal-dropdown__item {
+  padding-left: var(--padding-main);
+  display: flex;
+  align-items: center;
+  height: 42;
+  border: 1px solid var(--text-secondary);
+  border-radius: var(--border-radius-main);
+}
+
+.modal-dropdown__img-container {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-dropdown__img {
+  width: 35px;
+}
+
+.modal-dropdown__text {
+  margin-left: var(--margin-tiny);
+  color: var(--text-main);
+}

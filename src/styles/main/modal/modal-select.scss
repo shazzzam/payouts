@@ -1,3 +1,7 @@
+.modal-select {
+  position: relative;
+}
+
 .modal-select__selected {
   height: 60px;
   width: 100%;
@@ -27,7 +31,8 @@
   align-items: center;
 }
 
-.modal-select__name, .modal-select__comission {
+.modal-select__name,
+.modal-select__comission {
   color: var(--text-main);
   font-size: 10px;
   font-family: 'Avenir-heavy', sans-serif;

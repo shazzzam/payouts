@@ -1,13 +1,19 @@
-import { DetailedHTMLProps, FC, HTMLAttributes } from "react";
+import { DetailedHTMLProps, FC, HTMLAttributes, useState } from "react";
 import { useAppSelector } from "../../../store/hooks";
 import { selectPaymentMethods } from "../../../store/features/paymentMethods";
 import { Text } from "../../../ui";
 import { ChevronDown } from "../../../ui/icons";
+import { Dropdown } from "./Dropdown";
 
 type ModalSelectProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 
 export const ModalSelect: FC<ModalSelectProps> = ({ className, ...props }) => {
   const { activeMethod } = useAppSelector(selectPaymentMethods);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+
+  const switchDropdown = () => {
+    setIsDropdownOpen(value => !value);
+  }
 
   return (
     <div
@@ -16,6 +22,7 @@ export const ModalSelect: FC<ModalSelectProps> = ({ className, ...props }) => {
     >
       <div
         className="modal-select__selected"
+        onClick={switchDropdown}
       >
         <div className="modal-select__img-container">
           <img className="modal-select__img" src={activeMethod!.logoUrl} />
@@ -42,6 +49,7 @@ export const ModalSelect: FC<ModalSelectProps> = ({ className, ...props }) => {
         </div>
         <ChevronDown className="modal-select__chevron" />
       </div>
+      {isDropdownOpen && <Dropdown closeHandler={switchDropdown} />}
     </div>
   );
 };
